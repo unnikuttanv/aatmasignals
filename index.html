@@ -1,99 +1,593 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Wireless Patient Monitoring - Europe</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .hero {
-            text-align: center;
-            padding: 3rem 1rem;
-            background-color: #004080;
-            color: white;
-        }
-        .hero h1 {
-            font-size: 2.5rem;
-        }
-        .container section {
-            padding: 2rem 0;
-        }
-        .grid img {
-            border-radius: 8px;
-        }
-    </style>
-</head>
-<body>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
 
-    <nav class="container-fluid">
-        <ul><li><strong>Aathma Signals</strong></li></ul>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#technology">Technology</a></li>
-            <li><a href="#comparison">Comparison</a></li>
-            <li><a href="#regulations">Regulations</a></li>
-            <li><a href="#contact" role="button">Contact</a></li>
-        </ul>
-    </nav>
+    <!--====== Title ======-->
+    <title>Aathma Signals</title>
 
-    <header class="hero">
-        <h1>Next-Gen Wireless Patient Monitoring</h1>
-        <p>Enhancing Patient Care Across Europe</p>
-    </header>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <main class="container">
-        <section id="about">
-            <h2>Transforming Healthcare with Wireless Monitoring</h2>
-            <p>Our advanced wireless patient monitoring solutions are revolutionizing European hospitals, providing real-time data, enhanced mobility, and compliance with strict EU medical regulations.</p>
-            <img src="https://files.oaiusercontent.com/file-KMGDIn5nHQlRVBUx" alt="Modern Hospital Monitoring" width="100%">
-        </section>
-    </main>
+    <!--====== Favicon Icon ======-->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/png"
+    />
 
-    <section id="technology" class="container">
-        <h2>Our Technology</h2>
-        <p>We leverage state-of-the-art wireless medical devices that provide continuous monitoring without the constraints of traditional wired systems.</p>
-        <ul>
-            <li>Real-time ECG, oxygen, and blood pressure monitoring</li>
-            <li>Secure cloud-based data transmission</li>
-            <li>AI-powered predictive analytics</li>
-        </ul>
-    </section>
+    <!--====== CSS Files LinkUp ======-->
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/glightbox.min.css" />
+    <link rel="stylesheet" href="assets/css/lineIcons.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-    <section id="comparison" class="container">
-        <h2>Traditional vs. Wireless Monitoring</h2>
-        <div class="grid">
-            <figure>
-                <img src="https://files.oaiusercontent.com/file-KMGDIn5nHQlRVBUx" alt="Traditional Wired Monitoring" width="100%">
-                <figcaption>Traditional wired monitoring limits mobility.</figcaption>
-            </figure>
-            <figure>
-                <img src="https://files.oaiusercontent.com/file-hozkL3qAu9cm5IrV" alt="Wireless Monitoring" width="100%">
-                <figcaption>Wireless monitoring enhances efficiency and comfort.</figcaption>
-            </figure>
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+      <div class="loader">
+        <div class="spinner">
+          <div class="spinner-container">
+            <div class="spinner-rotator">
+              <div class="spinner-left">
+                <div class="spinner-circle"></div>
+              </div>
+              <div class="spinner-right">
+                <div class="spinner-circle"></div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
 
-    <section id="regulations" class="container">
-        <h2>EU Compliance & Regulations</h2>
-        <p>Our solutions comply with <strong>MDR 2017/745</strong> and <strong>GDPR</strong> to ensure secure data handling and patient safety.</p>
-    </section>
+    <!--====== HEADER PART START ======-->
+    <header class="header-area">
+      <div class="navbar-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="index.html">
+                  <img src="assets/images/logo/logo.svg" alt="Logo" />
+                </a>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="toggler-icon"> </span>
+                  <span class="toggler-icon"> </span>
+                  <span class="toggler-icon"> </span>
+                </button>
 
-    <section id="contact" class="container">
-        <h2>Contact Us</h2>
-        <p>Interested in implementing wireless patient monitoring? Contact us today.</p>
-        <form class="grid">
-            <input type="text" id="firstname" name="firstname" placeholder="Your Name" required>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-            <button type="submit" onclick="event.preventDefault()">Submit</button>
-        </form>
-    </section>
+                <div
+                  class="collapse navbar-collapse sub-menu-bar"
+                  id="navbarSupportedContent"
+                >
+                  <ul id="nav" class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                      <a class="page-scroll active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="page-scroll" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="page-scroll" href="#facts">Why</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- navbar collapse -->
 
-    <footer class="container">
-        <small><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></small>
+                <div class="navbar-btn d-none d-sm-inline-block">
+                  <a
+                    class="main-btn"
+                    data-scroll-nav="0"
+                    href="https://uideck.com/templates/basic/"
+                    rel="nofollow"
+                  >
+                    Download Now
+                  </a>
+                </div>
+              </nav>
+              <!-- navbar -->
+            </div>
+          </div>
+          <!-- row -->
+        </div>
+        <!-- container -->
+      </div>
+      <!-- navbar area -->
+
+      <div
+        id="home"
+        class="header-hero bg_cover"
+        style="background-image: url(assets/images/header/banner-bg.svg)"
+      >
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="header-hero-content text-center">
+                <h3
+                  class="header-sub-title wow fadeInUp"
+                  data-wow-duration="1.3s"
+                  data-wow-delay="0.2s"
+                >
+                Next-Gen Wireless Patient Monitoring
+                </h3>
+                <h2
+                  class="header-title wow fadeInUp"
+                  data-wow-duration="1.3s"
+                  data-wow-delay="0.5s"
+                >
+                Enhancing Patient Care Across Europe
+                </h2>
+                <a
+                  href="javascript:void(0)"
+                  class="main-btn wow fadeInUp"
+                  data-wow-duration="1.3s"
+                  data-wow-delay="1.1s"
+                >
+                  Get Started
+                </a>
+              </div>
+              <!-- header hero content -->
+            </div>
+          </div>
+          <!-- row -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div
+                class="header-hero-image text-center wow fadeIn"
+                data-wow-duration="1.3s"
+                data-wow-delay="1.4s"
+              >
+                <img src="assets/images/header/header-hero.png" alt="hero" />
+              </div>
+              <!-- header hero image -->
+            </div>
+          </div>
+          <!-- row -->
+        </div>
+        <!-- container -->
+        <div id="particles-1" class="particles"></div>
+      </div>
+      <!-- header hero -->
+    </header>
+    <!--====== HEADER PART ENDS ======-->
+
+    <!--====== BRAND PART START ======-->
+    <div class="brand-area pt-90">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div
+              class="
+                brand-logo
+                d-flex
+                align-items-center
+                justify-content-center justify-content-md-between
+              "
+            >
+              <div
+                class="single-logo mt-30 wow fadeIn"
+                data-wow-duration="1s"
+                data-wow-delay="0.2s"
+              >
+                <img src="assets/images/brands/uideck.svg" alt="brand" />
+              </div>
+              <!-- single logo -->
+              <div
+                class="single-logo mt-30 wow fadeIn"
+                data-wow-duration="1.5s"
+                data-wow-delay="0.2s"
+              >
+                <img src="assets/images/brands/ayroui.svg" alt="brand" />
+              </div>
+              <!-- single logo -->
+              <div
+                class="single-logo mt-30 wow fadeIn"
+                data-wow-duration="1.5s"
+                data-wow-delay="0.3s"
+              >
+                <img src="assets/images/brands/graygrids.svg" alt="brand" />
+              </div>
+              <!-- single logo -->
+              <div
+                class="single-logo mt-30 wow fadeIn"
+                data-wow-duration="1.5s"
+                data-wow-delay="0.4s"
+              >
+                <img src="assets/images/brands/lineicons.svg" alt="brand" />
+              </div>
+              <!-- single logo -->
+              <div
+                class="single-logo mt-30 wow fadeIn"
+                data-wow-duration="1.5s"
+                data-wow-delay="0.5s"
+              >
+                <img
+                  src="assets/images/brands/ecommerce-html.svg"
+                  alt="brand"
+                />
+              </div>
+              <!-- single logo -->
+            </div>
+            <!-- brand logo -->
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </div>
+    <!--====== BRAND PART ENDS ======-->
+
+    <!--====== SERVICES PART START ======-->
+    <section id="features" class="services-area pt-120">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="section-title text-center pb-40">
+              <div class="line m-auto"></div>
+              <h3 class="title">
+                Revolutionize Your Healthcare Journey with Aathma Signals
+                <span> Comes with everything you need to get started!</span>
+              </h3>
+            </div>
+            <!-- section title -->
+          </div>
+        </div>
+        <!-- row -->
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-7 col-sm-8">
+            <div
+              class="single-services text-center mt-30 wow fadeIn"
+              data-wow-duration="1s"
+              data-wow-delay="0.2s"
+            >
+              <div class="services-icon">
+                <img
+                  class="shape"
+                  src="assets/images/services/services-shape.svg"
+                  alt="shape"
+                />
+                <img
+                  class="shape-1"
+                  src="assets/images/services/services-shape-1.svg"
+                  alt="shape"
+                />
+                <i class="lni lni-baloon"> </i>
+              </div>
+              <div class="services-content mt-30">
+                <h4 class="services-title">
+                  <a href="javascript:void(0)">Continuous Health Monitoring</a>
+                </h4>
+                <p class="text">
+                  Stay connected to vital health data through our advanced wireless system, ensuring real-time updates on your health status.
+                </p>
+                <a class="more" href="javascript:void(0)"
+                  >Learn More <i class="lni lni-chevron-right"> </i>
+                </a>
+              </div>
+            </div>
+            <!-- single services -->
+          </div>
+          <div class="col-lg-4 col-md-7 col-sm-8">
+            <div
+              class="single-services text-center mt-30 wow fadeIn"
+              data-wow-duration="1s"
+              data-wow-delay="0.5s"
+            >
+              <div class="services-icon">
+                <img
+                  class="shape"
+                  src="assets/images/services/services-shape.svg"
+                  alt="shape"
+                />
+                <img
+                  class="shape-1"
+                  src="assets/images/services/services-shape-2.svg"
+                  alt="shape"
+                />
+                <i class="lni lni-cog"> </i>
+              </div>
+              <div class="services-content mt-30">
+                <h4 class="services-title">
+                  <a href="javascript:void(0)">Expert Healthcare Connection</a>
+                </h4>
+                <p class="text">
+                  Access healthcare professionals easily for timely interventions and personalized support tailored to your needs.
+                </p>
+                <a class="more" href="javascript:void(0)"
+                  >Learn More <i class="lni lni-chevron-right"> </i>
+                </a>
+              </div>
+            </div>
+            <!-- single services -->
+          </div>
+          <div class="col-lg-4 col-md-7 col-sm-8">
+            <div
+              class="single-services text-center mt-30 wow fadeIn"
+              data-wow-duration="1s"
+              data-wow-delay="0.8s"
+            >
+              <div class="services-icon">
+                <img
+                  class="shape"
+                  src="assets/images/services/services-shape.svg"
+                  alt="shape"
+                />
+                <img
+                  class="shape-1"
+                  src="assets/images/services/services-shape-3.svg"
+                  alt="shape"
+                />
+                <i class="lni lni-bolt-alt"> </i>
+              </div>
+              <div class="services-content mt-30">
+                <h4 class="services-title">
+                  <a href="javascript:void(0)">Secure Data Protection</a>
+                </h4>
+                <p class="text">
+                  Rest assured your health information is safeguarded with advanced security measures.
+                </p>
+                <a class="more" href="javascript:void(0)"
+                  >Learn More <i class="lni lni-chevron-right"> </i>
+                </a>
+              </div>
+            </div>
+            <!-- single services -->
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </section>
+    <!--====== SERVICES PART ENDS ======-->
+
+    <section id="about">
+      <!--====== ABOUT PART START ======-->
+      <div class="about-area pt-70">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div
+                class="about-content mt-50 wow fadeInLeftBig"
+                data-wow-duration="1s"
+                data-wow-delay="0.5s"
+              >
+                <div class="section-title">
+                  <div class="line"></div>
+                  <h3 class="title">
+                    Comprehensive Condition Management
+                  </h3>
+                </div>
+                <!-- section title -->
+                <p class="text">
+                  Effectively manage chronic conditions with our proactive features, designed to support your health journey.
+                </p>
+                <a href="javascript:void(0)" class="main-btn">Try it Free</a>
+              </div>
+              <!-- about content -->
+            </div>
+            <div class="col-lg-6">
+              <div
+                class="about-image text-center mt-50 wow fadeInRightBig"
+                data-wow-duration="1s"
+                data-wow-delay="0.5s"
+              >
+                <img src="assets/images/about/about1.svg" alt="about" />
+              </div>
+              <!-- about image -->
+            </div>
+          </div>
+          <!-- row -->
+        </div>
+        <!-- container -->
+        <div class="about-shape-1">
+          <img src="assets/images/about/about-shape-1.svg" alt="shape" />
+        </div>
+      </div>
+      <!--====== ABOUT PART ENDS ======-->
+      <!--====== ABOUT PART START ======-->
+      <div class="about-area pt-70">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div
+                class="about-content mt-50 wow fadeInLeftBig"
+                data-wow-duration="1s"
+                data-wow-delay="0.5s"
+              >
+                <div class="section-title">
+                  <div class="line"></div>
+                  <h3 class="title">
+                    EU Compliance & Regulations
+                  </h3>
+                </div>
+                <!-- section title -->
+                <p class="text">
+                  Our solutions comply with MDR 2017/745 and GDPR to ensure secure data handling and patient safety.
+                </p>
+                <a href="javascript:void(0)" class="main-btn">Try it Free</a>
+              </div>
+              <!-- about content -->
+            </div>
+            <div class="col-lg-6">
+              <div
+                class="about-image text-center mt-50 wow fadeInRightBig"
+                data-wow-duration="1s"
+                data-wow-delay="0.5s"
+              >
+                <img src="assets/images/about/about3.svg" alt="about" />
+              </div>
+              <!-- about image -->
+            </div>
+          </div>
+          <!-- row -->
+        </div>
+        <!-- container -->
+        <div class="about-shape-1">
+          <img src="assets/images/about/about-shape-1.svg" alt="shape" />
+        </div>
+      </div>
+      <!--====== ABOUT PART ENDS ======-->
+    </section>
+    <!--====== FOOTER PART START ======-->
+    <footer id="footer" class="footer-area pt-120">
+      <div class="container">
+        <div
+          class="subscribe-area wow fadeIn"
+          data-wow-duration="1s"
+          data-wow-delay="0.5s"
+        >
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="subscribe-content mt-45">
+                <h2 class="subscribe-title">
+                  Subscribe To Our Newsletter <span>get reguler updates</span>
+                </h2>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="subscribe-form mt-50">
+                <form action="#">
+                  <input type="text" placeholder="Enter eamil" />
+                  <button class="main-btn">Subscribe</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- row -->
+        </div>
+        <!-- subscribe area -->
+        <div class="footer-widget pb-100">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-8">
+              <div
+                class="footer-about mt-50 wow fadeIn"
+                data-wow-duration="1s"
+                data-wow-delay="0.2s"
+              >
+                <a class="logo" href="javascript:void(0)">
+                  <img src="assets/images/logo/logo.svg" alt="logo" />
+                </a>
+                <p class="text">
+                  An end-to-end Wireless remote patient monitoring system.
+                </p>
+                <ul class="social">
+                  <li>
+                    <a href="javascript:void(0)">
+                      <i class="lni lni-facebook-filled"> </i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <i class="lni lni-twitter-filled"> </i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <i class="lni lni-instagram-filled"> </i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <i class="lni lni-linkedin-original"> </i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- footer about -->
+            </div>
+            <div class="col-lg-5 col-md-7 col-sm-12">
+              <div class="footer-link d-flex mt-50 justify-content-sm-between">
+                <div
+                  class="link-wrapper wow fadeIn"
+                  data-wow-duration="1s"
+                  data-wow-delay="0.4s"
+                >
+                  <div class="footer-title">
+                  </div>
+                </div>
+                <!-- footer wrapper -->
+                <div
+                  class="link-wrapper wow fadeIn"
+                  data-wow-duration="1s"
+                  data-wow-delay="0.6s"
+                >
+                  <div class="footer-title">
+                    <h4 class="title">Resources</h4>
+                  </div>
+                  <ul class="link">
+                    <li><a href="javascript:void(0)">Home</a></li>
+                    <li><a href="javascript:void(0)">Contact</a></li>
+                  </ul>
+                </div>
+                <!-- footer wrapper -->
+              </div>
+              <!-- footer link -->
+            </div>
+            <div class="col-lg-3 col-md-5 col-sm-12">
+              <div
+                class="footer-contact mt-50 wow fadeIn"
+                data-wow-duration="1s"
+                data-wow-delay="0.8s"
+              >
+                <div class="footer-title">
+                  <h4 class="title">Contact Us</h4>
+                </div>
+                <ul class="contact">
+                  <li>+447423549488</li>
+                  <li>info@aathmasignals.com</li>
+                  <li>www.aathmasignals.com</li>
+                  <li>
+                    38 Fleet Street , Swansea <br />
+                    Wales, United Kingdom <br />
+                    SA1 3US
+                  </li>
+                </ul>
+              </div>
+              <!-- footer contact -->
+            </div>
+          </div>
+          <!-- row -->
+        </div>
+        <!-- footer widget -->
+      </div>
+      <!-- container -->
+      <div id="particles-2"></div>
     </footer>
+    <!--====== FOOTER PART ENDS ======-->
 
-</body>
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"> <i class="lni lni-chevron-up"> </i> </a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+
+    <!--====== Javascript Files ======-->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/glightbox.min.js"></script>
+    <script src="assets/js/count-up.min.js"></script>
+    <script src="assets/js/particles.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
