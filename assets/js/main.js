@@ -92,13 +92,15 @@
   });
 
   // ========= glightbox
-  const myGallery = GLightbox({
-    href: "https://www.youtube.com/watch?v=r44RKWyfcFw",
-    type: "video",
-    source: "youtube", //vimeo, youtube or local
-    width: 900,
-    autoplayVideos: true,
-  });
+  if (typeof GLightbox !== 'undefined') {
+    const myGallery = GLightbox({
+      href: "https://www.youtube.com/watch?v=r44RKWyfcFw",
+      type: "video",
+      source: "youtube",
+      width: 900,
+      autoplayVideos: true,
+    });
+  }
 
   //====== counter up
   const cu = new counterUp({
