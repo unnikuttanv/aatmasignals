@@ -1385,3 +1385,118 @@ p {
   background: rgba(11, 143, 172, 0.2);
   color: var(--gray-900);
 }
+
+/*===========================
+  TEAM SECTION
+===========================*/
+.team-area {
+  background: var(--gray-100);
+}
+
+.team-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px 36px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: all 0.35s ease;
+  height: 100%;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+
+.team-avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--gradient-primary);
+  box-shadow: 0 8px 24px rgba(11, 143, 172, 0.35);
+  letter-spacing: 1px;
+}
+
+.team-avatar.avatar-accent {
+  background: var(--gradient-accent);
+  box-shadow: 0 8px 24px rgba(254, 110, 154, 0.35);
+}
+
+.team-avatar.avatar-secondary {
+  background: linear-gradient(135deg, #119BD2 0%, #0B8FAC 100%);
+  box-shadow: 0 8px 24px rgba(17, 155, 210, 0.35);
+}
+
+.team-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 6px;
+}
+
+.team-role {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--primary);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.team-bio {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--gray-500);
+  margin-bottom: 24px;
+}
+
+.team-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.team-tag {
+  background: rgba(11, 143, 172, 0.08);
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 50px;
+  border: 1px solid rgba(11, 143, 172, 0.15);
+}
+
+.team-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.team-linkedin:hover {
+  color: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.team-linkedin i {
+  font-size: 18px;
+}
+
+@media (max-width: 767px) {
+  .team-card { padding: 32px 24px; }
+}
