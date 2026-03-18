@@ -8,10 +8,10 @@
 
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png" />
 
-    <!-- Fonts -->
+    <!-- Fonts: Syne (display) + DM Sans (body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/animate.css" />
@@ -22,6 +22,9 @@
   </head>
 
   <body>
+    <!-- ====== GRAIN OVERLAY ====== -->
+    <div class="grain-overlay" aria-hidden="true"></div>
+
     <!-- ====== PRELOADER ====== -->
     <div class="preloader">
       <div class="loader">
@@ -102,6 +105,26 @@
             </div>
           </div>
         </div>
+
+        <!-- ECG Heartbeat Decoration -->
+        <div class="ecg-decoration" aria-hidden="true">
+          <svg viewBox="0 0 1400 80" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="ecgGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="rgba(15, 206, 171, 0)" />
+                <stop offset="30%" stop-color="rgba(15, 206, 171, 0.5)" />
+                <stop offset="50%" stop-color="rgba(15, 206, 171, 0.7)" />
+                <stop offset="70%" stop-color="rgba(15, 206, 171, 0.5)" />
+                <stop offset="100%" stop-color="rgba(15, 206, 171, 0)" />
+              </linearGradient>
+            </defs>
+            <path class="ecg-path"
+              d="M0,40 L350,40 L380,40 L395,28 L410,52 L425,8 L440,72 L455,35 L468,44 L480,40 L920,40 L950,40 L965,30 L980,50 L995,12 L1010,68 L1025,37 L1038,43 L1050,40 L1400,40"
+              stroke="url(#ecgGrad)" stroke-width="2" fill="none"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
         <div id="particles-1" class="particles"></div>
       </div>
     </header>
@@ -370,67 +393,85 @@
           </div>
         </div>
 
-        <div class="row justify-content-center g-4">
+        <div class="row g-4 justify-content-center">
 
           <!-- Unnikuttan -->
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s">
             <div class="team-card">
-              <div class="team-avatar">UV</div>
-              <h4 class="team-name">Unnikuttan V. Vijayan</h4>
-              <span class="team-role">Technical Co-Founder</span>
-              <p class="team-bio">
-                IITian and medical-device veteran with expertise in AI strategy, signal processing, and EU regulatory affairs (MDR / GDPR). Formerly Head of Data Management at Diametos GmbH and Staff Engineer at LifeSignals Group.
-              </p>
-              <div class="team-tags">
-                <span class="team-tag">LLMOps</span>
-                <span class="team-tag">Signal Processing</span>
-                <span class="team-tag">MDR Compliance</span>
-                <span class="team-tag">IoT</span>
+              <div class="team-photo">
+                <img src="assets/images/team/team-1.png" alt="Unnikuttan V. Vijayan" />
+                <div class="team-socials">
+                  <a href="https://www.linkedin.com/in/unnikuttanvv" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="lni lni-linkedin-original"></i>
+                  </a>
+                </div>
               </div>
-              <a class="team-linkedin" href="https://www.linkedin.com/in/unnikuttanvv" target="_blank" rel="noopener noreferrer">
-                <i class="lni lni-linkedin-original"></i> LinkedIn
-              </a>
+              <div class="team-info">
+                <h4 class="team-name">Unnikuttan V. Vijayan</h4>
+                <span class="team-role">Technical Co-Founder</span>
+                <p class="team-bio">
+                  IITian and medical-device veteran with expertise in AI strategy, signal processing, and EU regulatory affairs (MDR / GDPR). Formerly Head of Data Management at Diametos GmbH.
+                </p>
+                <div class="team-tags">
+                  <span class="team-tag">LLMOps</span>
+                  <span class="team-tag">Signal Processing</span>
+                  <span class="team-tag">MDR</span>
+                  <span class="team-tag">IoT</span>
+                </div>
+              </div>
             </div>
           </div>
 
           <!-- Sidharth -->
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
             <div class="team-card">
-              <div class="team-avatar avatar-accent">SJ</div>
-              <h4 class="team-name">Sidharth J. Menon</h4>
-              <span class="team-role">Technical Co-Founder</span>
-              <p class="team-bio">
-                Data scientist and software engineer specialising in biomedical data analysis, machine learning, and Python-based R&D. MS in Data Science from Swansea University; previously Data Specialist at LifeSignals Group.
-              </p>
-              <div class="team-tags">
-                <span class="team-tag">Machine Learning</span>
-                <span class="team-tag">Deep Learning</span>
-                <span class="team-tag">Python</span>
-                <span class="team-tag">Biomedical Data</span>
+              <div class="team-photo">
+                <img src="assets/images/team/team-2.png" alt="Sidharth J. Menon" />
+                <div class="team-socials">
+                  <a href="https://www.linkedin.com/in/sidjm" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="lni lni-linkedin-original"></i>
+                  </a>
+                </div>
               </div>
-              <a class="team-linkedin" href="https://www.linkedin.com/in/sidjm" target="_blank" rel="noopener noreferrer">
-                <i class="lni lni-linkedin-original"></i> LinkedIn
-              </a>
+              <div class="team-info">
+                <h4 class="team-name">Sidharth J. Menon</h4>
+                <span class="team-role">Technical Co-Founder</span>
+                <p class="team-bio">
+                  Data scientist specialising in biomedical data analysis, machine learning, and Python-based R&D. MS in Data Science from Swansea University.
+                </p>
+                <div class="team-tags">
+                  <span class="team-tag">Machine Learning</span>
+                  <span class="team-tag">Deep Learning</span>
+                  <span class="team-tag">Python</span>
+                  <span class="team-tag">Biomedical Data</span>
+                </div>
+              </div>
             </div>
           </div>
 
           <!-- Sam -->
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
             <div class="team-card">
-              <div class="team-avatar avatar-secondary">SV</div>
-              <h4 class="team-name">Dr. Sam Varghese</h4>
-              <span class="team-role">Clinical Advisor</span>
-              <p class="team-bio">
-                Specialist physician (Facharzt) in Cardiac and Thoracic Surgery at the University Clinic of Otto-von-Guericke University Magdeburg. Brings deep clinical expertise in cardiac care to guide the real-world applicability of our monitoring solutions.
-              </p>
-              <div class="team-tags">
-                <span class="team-tag">Cardiac Surgery</span>
-                <span class="team-tag">Thoracic Surgery</span>
-                <span class="team-tag">Clinical Strategy</span>
+              <div class="team-photo">
+                <img src="assets/images/team/team-3.png" alt="Dr. Sam Varghese" />
+                <div class="team-socials">
+                  <a href="https://kchh.med.ovgu.de/Herzchirurgie/Team/Fach%C3%A4rzte/Sam+Varghese-p-388.html" target="_blank" rel="noopener noreferrer" aria-label="Profile">
+                    <i class="lni lni-world"></i>
+                  </a>
+                </div>
               </div>
-              <a class="team-linkedin" href="https://kchh.med.ovgu.de/Herzchirurgie/Team/Fach%C3%A4rzte/Sam+Varghese-p-388.html" target="_blank" rel="noopener noreferrer">
-                <i class="lni lni-world"></i> Profile
-              </a>
+              <div class="team-info">
+                <h4 class="team-name">Dr. Sam Varghese</h4>
+                <span class="team-role">Clinical Advisor</span>
+                <p class="team-bio">
+                  Specialist physician (Facharzt) in Cardiac and Thoracic Surgery at Otto-von-Guericke University Magdeburg. Guides real-world applicability of our monitoring solutions.
+                </p>
+                <div class="team-tags">
+                  <span class="team-tag">Cardiac Surgery</span>
+                  <span class="team-tag">Thoracic Surgery</span>
+                  <span class="team-tag">Clinical Strategy</span>
+                </div>
+              </div>
             </div>
           </div>
 
